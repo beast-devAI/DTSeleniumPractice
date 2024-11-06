@@ -23,7 +23,7 @@ public class CheckBoxHandling {
         driver.get(appURL);
         driver.manage().window().maximize();
 
-        // Case #1 : Targetting individual elements
+        // Case #1 : Targetting individual check box elements
 
         //  driver.findElement(By.cssSelector(loc_ChkBox_Blue)).click();
         // driver.findElement(By.cssSelector(loc_ChkBox_Orange)).click();
