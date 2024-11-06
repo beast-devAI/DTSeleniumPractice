@@ -8,13 +8,13 @@ public class BasicFileUpload {
 
     final static String appURL = "https://omayo.blogspot.com/";
     static String loc_File_Upload = "form>input[type='file']";
-    final static String filePath="resources/SeleniumFileTestUpload.txt";
+    final static String uploadFilePath="resources/SeleniumFileTestUpload.txt";
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
         driver.get(appURL);
         driver.manage().window().maximize();
-        driver.findElement(By.cssSelector(loc_File_Upload)).sendKeys(filePath);
+        driver.findElement(By.cssSelector(loc_File_Upload)).sendKeys(uploadFilePath);
 
     }
 }
