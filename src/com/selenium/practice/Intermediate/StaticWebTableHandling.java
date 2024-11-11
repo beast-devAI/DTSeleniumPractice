@@ -15,6 +15,9 @@ public class StaticWebTableHandling {
     final static String tableRowLoc = "table#table1 tr";
     final static String tableDataLoc = "table#table1 tr td";
 
+    final static int rowNum = 2;
+    final static int cellNum = 1;
+
     public static void main(String[] args) throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
@@ -23,17 +26,49 @@ public class StaticWebTableHandling {
 
         System.out.println("Total rows in table are:" + driver.findElements(By.cssSelector(tableRowLoc)).size());
 
+/*
         List<WebElement> tableData = driver.findElements(By.cssSelector(tableDataLoc));
 
-        for(WebElement el:tableData) {
+        for (WebElement el : tableData) {
 
             System.out.println(el.getText());
 
         }
+*/
+
+
+
+       List <WebElement> row=driver.findElements(By.tagName("tr"));
+
+/*
+       for(WebElement rowElem:row) {
+
+          List<WebElement> cell = rowElem.findElements(By.tagName("td"));
+
+          for(WebElement cellData:cell){
+
+              System.out.print(cellData.getText()+"\t");
+          }
+
+           System.out.println();
+       }
+*/
+       // List<WebElement> cell=driver.findElements(By.tagName("td"));
+
+        // getting cell data
+
+        System.out.println( row.get(rowNum).findElements(By.tagName("td")).get(cellNum).getText());
+
+
 
 
     }
-
-
 }
+
+
+
+
+
+
+
 
